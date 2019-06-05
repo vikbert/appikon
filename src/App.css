@@ -1,13 +1,6 @@
 .App {
   text-align: center;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -15,19 +8,40 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 20px;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.icon {
+  position: relative;
+  display: inline-block;
+  width: 260px;
+  height: 260px;
+  margin: 20px;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.calendar {
+  border: 1px #ffffff solid;
+  background-color: #ffffff;
+  font-family: 'Fredericka the Great', cursive;
+  font-size: 170px;
+  color: #ffffff;
+  padding: 10px;
+  display: none;
+}
+input {
+  padding: 8px;
+  height: 30px;
+  font-size: 20px;
+}
+img {
+  border: 1px #ffffff solid;
+  background-color: #ffffff;
+  border-radius: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
