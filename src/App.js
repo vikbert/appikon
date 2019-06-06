@@ -9,6 +9,7 @@ function App() {
       <GitHub gitUrl={'https://github.com/vikbert/appikcon.git'}/>
       <header className="App-header">
         <IconGenerator/>
+        <h1 className={'headerTitle'}>a minimal icon generator</h1>
       </header>
     </div>
   );
