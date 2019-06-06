@@ -1,7 +1,8 @@
 # Appikon
 A minimal App icon generator made by `React.js`.
 
-<img src="./header.png" width="600">
+
+<img src="./header.png"/>
 
 ## Available Scripts
 
