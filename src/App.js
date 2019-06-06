@@ -3,7 +3,7 @@ import "./App.css";
 import GitHub from "./component/Github";
 
 function App() {
-  const [inputValue, setInputValue] = useState("a9");
+  const [inputValue, setInputValue] = useState("♞");
   const [image, setImage] = useState("");
   const handleOnChange = (e) => {
     let value = e.target.value.trim();
