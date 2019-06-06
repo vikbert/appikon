@@ -41,7 +41,7 @@ function App() {
 
   return (
     <div className="App">
-      <GitHub gitUrl={}/>
+      <GitHub gitUrl={'https://github.com/vikbert/appikcon.git'}/>
       <header className="App-header">
         <canvas id="canvasComponent" className="icon calendar"/>
         <ImageLink/>
