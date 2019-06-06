@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
 const IconGenerator = () => {
   const classes = useStyles();
 
-  const [inputValue, setInputValue] = useState("öÜ");
+  const [inputValue, setInputValue] = useState("♜");
   const [isDownloaded, setIsDownloaded] = useState(false);
   const [image, setImage] = useState("");
 
@@ -109,13 +109,15 @@ const IconGenerator = () => {
   };
 
   function ButtonLink() {
-    return isDownloaded && (
+    return isDownloaded
+      ? (
       <a href="https://realfavicongenerator.net/" className={classes.buttonLink}>
         <Button className={classes.gotoButton}>
           To Favicon Generator
         </Button>
       </a>
-    );
+    )
+      : (<span>type and click for download ... 🚀</span>);
   };
 
   return (
