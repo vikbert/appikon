@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import "./App.css";
+import GitHub from "./component/Github";
 
 function App() {
   const [inputValue, setInputValue] = useState("a9");
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div className="App">
+      <GitHub gitUrl={}/>
       <header className="App-header">
         <canvas id="canvasComponent" className="icon calendar"/>
         <ImageLink/>

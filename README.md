@@ -1,4 +1,5 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Appikon
+A minimal App icon generator made by `React.js`.
 
 ## Available Scripts
 
