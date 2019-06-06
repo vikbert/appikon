@@ -3,8 +3,25 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import {MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles'
+import CartInfo from './component/Cart';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+
+const muiBaseTheme = createMuiTheme();
+
+ReactDOM.render(
+  <MuiThemeProvider
+    theme={createMuiTheme({
+      typography: {
+        useNextVariants: true
+      },
+      overrides: CartInfo.getTheme(muiBaseTheme)
+    })}
+  >
+    <App />
+  </MuiThemeProvider>,
+  document.getElementById('root')
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
