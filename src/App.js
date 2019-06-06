@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 import "./App.css";
 
 function App() {
-  const [inputValue, setInputValue] = useState("de");
+  const [inputValue, setInputValue] = useState("a9");
   const [image, setImage] = useState("");
   const handleOnChange = (e) => {
     let value = e.target.value.trim();
@@ -13,30 +13,43 @@ function App() {
   };
 
   useEffect(() => {
+    let textSize = "170px";
+    let textOffsetX = 8;
+    let textOffsetY = 195;
+    if (inputValue.length === 1) {
+      textSize = "200px";
+      textOffsetX = 30;
+    }
     let canvasTxt = document.getElementById("canvasComponent").getContext("2d");
     canvasTxt.canvas.width = 260;
     canvasTxt.canvas.height = 260;
-    canvasTxt.font = "160px Major Mono Display";
+    canvasTxt.font = `${textSize} Major Mono Display`;
     canvasTxt.fillStyle = "#990cab";
-    canvasTxt.fillText(inputValue, 8, 180);
+    canvasTxt.fillText(inputValue, textOffsetX, textOffsetY);
     canvasTxt.fillRect(0, 0, canvasTxt.width, canvasTxt.height);
     setImage(canvasTxt.canvas.toDataURL());
-  });
+  }, [inputValue]);
+
+  function ImageLink() {
+    return image.length === 0 ? null : (
+      <a href={image} download={inputValue + ".png"}>
+        <img id="imageComponent" alt="icon" src={image}/>
+      </a>
+    );
+  }
 
   return (
     <div className="App">
       <header className="App-header">
         <canvas id="canvasComponent" className="icon calendar"/>
-        {image.length > 0 ? (
-          <img id="imageComponent" alt="icon image" src={image}/>
-        ) : null}
-
-        <p>Enter 2 Characters to generate your iOS icon</p>
+        <ImageLink/>
+        <p className="tip">Enter Characters + click icon to download</p>
         <input
           type="text"
           value={inputValue}
           onChange={handleOnChange}
-          placeholder="max. 2 characters"
+          size="25"
+          placeholder="enter max. 2 characters"
         />
       </header>
     </div>
