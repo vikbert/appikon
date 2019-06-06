@@ -2,7 +2,7 @@
   text-align: center;
 }
 .App-header {
-  background-color: #282c34;
+  background-color: #282c34d4;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -32,19 +32,11 @@
   padding: 10px;
   display: none;
 }
-p.tip {
-  margin-top: 40px;
-}
-input {
-  padding: 8px;
-  height: 30px;
-  font-size: 16px;
-}
-img {
-  width: 150px;
+img.appIcon {
+  width: 120px;
   border: 1px #ffffff solid;
   background-color: #ffffff;
-  border-radius: 30px;
+  border-radius: 15px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
