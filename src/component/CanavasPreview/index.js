@@ -6,22 +6,6 @@ import isEmoji from "../../utils/isEmoji";
 const CanavasPreview = ({inputValue}) => {
     const [image, setImage] = useState("");
 
-    const DownloadLink = () => {
-        return (
-            <a href={image}
-               download={inputValue + ".png"}
-               onClick={handleClickForDownload}
-            >
-                <img
-                    className={"appIcon"}
-                    id="imageComponent"
-                    alt="icon"
-                    src={image}
-                />
-            </a>
-        );
-    };
-
     const handleClickForDownload = e => {
         if (inputValue.length === 0) {
             e.preventDefault();
@@ -31,6 +15,22 @@ const CanavasPreview = ({inputValue}) => {
 
         successToast(
             "Icon downloaded! Now click on the button to go to favicon generator for uploading your icon!",
+        );
+    };
+
+    const DownloadLink = () => {
+        return (
+            <a href={image}
+               download={"logo.png"}
+               onClick={handleClickForDownload}
+            >
+                <img
+                    className={"appIcon"}
+                    id="imageComponent"
+                    alt="icon"
+                    src={image}
+                />
+            </a>
         );
     };
 
@@ -63,6 +63,6 @@ const CanavasPreview = ({inputValue}) => {
             {image !== '' && (<DownloadLink/>)}
         </div>
     );
-}
+};
 
 export default CanavasPreview;

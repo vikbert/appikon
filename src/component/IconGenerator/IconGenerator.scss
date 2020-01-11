@@ -4,23 +4,19 @@
     flex-wrap: wrap;
     justify-content: center;
     justify-items: center;
-    transition: 0.3s;
-    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
-    background: linear-gradient(32deg, rgba(55, 16, 83, 1) 0%, rgba(162, 73, 190, 1) 29%, rgba(33, 16, 83, 1) 92%);
-    border-radius: 16px;
-    padding: 20px;
 }
 
 .item {
     width: 250px;
     height: auto;
     border: 1px solid rgba(167, 166, 166, 0.28);
-    padding: 10px;
+    padding: 5px 10px 20px 10px;
     margin: 10px;
 
     &.preview {
         border: none !important;
     }
+    
     button {
         cursor: pointer;
         padding: 8px 10px;
@@ -28,28 +24,28 @@
         width: 100%;
         background-color: rgba(55, 16, 83, 0.29);
     }
-}
-.form-control {
-    background-color: rgba(167, 166, 166, 0.2);
-    padding: 14px;
-    display: grid;
-
     input {
-        padding: 4px;
+        padding: 10px;
+        font-size: 1em;
+        width: 230px;
+        border: none;
+        &:focus {
+            outline: none;
+        }
     }
 }
 
 .step {
     margin: 10px 0;
     font-size: 18px;
-
 }
-
+$number-size: 20px;
 .step-number {
-    width: 20px;
-    height: 20px;
-    border: 2px solid rgba(222, 222, 222, 0.28);
+    width: $number-size;
+    height: $number-size;
     text-align: center;
+    background-color: #fff;
+    color: blueviolet;
     border-radius: 100%;
     font-size: 18px;
     font-weight: 700;

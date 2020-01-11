@@ -4,7 +4,6 @@ import './IconGenerator.scss';
 import {errorToast} from "../../utils/toastHelper";
 import CanavasPreview from "../CanavasPreview";
 import FaviconRedirectButton from "../FaviconRedirectButton";
-import Button from "@material-ui/core/Button";
 
 const IconGenerator = () => {
     const [inputValue, setInputValue] = useState("⏰");
@@ -26,29 +25,29 @@ const IconGenerator = () => {
             <div className="item">
                 <div className="step">
                     <div className="step-number">1</div>
-                    <span className="label">Enter letters:</span>
+                    <span className="label">Enter the letters</span>
                 </div>
-                <div className="form-control">
-                    <input
-                        type="text"
-                        value={inputValue}
-                        onChange={handleOnChange}
-                        size="25"
-                        placeholder="Max. 2 characters"
-                    />
-                </div>
+                <input
+                    type="text"
+                    value={inputValue}
+                    onChange={handleOnChange}
+                    size="25"
+                    placeholder="Max. 2 characters"
+                />
             </div>
             <div className="item">
                 <div className="step">
                     <div className="step-number">2</div>
-                    <span className="label">Click preview to download:</span>
+                    <span className="label">Click on the preview</span>
                 </div>
-                <Button>Download</Button>
+                
+                <span className="label">The "logo.png" will be downloaded.</span>
+
             </div>
             <div className="item">
                 <div className="step">
                     <div className="step-number">3</div>
-                    <span className="label">Upload the image:</span>
+                    <span className="label">Upload "logo.png"</span>
                 </div>
                 <FaviconRedirectButton/>
             </div>
