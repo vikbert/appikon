@@ -12,7 +12,7 @@
   color: white;
 }
 .headerTitle {
-  font-family: 'Major Mono Display', cursive;
+  font-family: "Major Mono Display", cursive;
   font-size: 22px;
   margin-top: 21px;
   color: #dedede69;
@@ -32,7 +32,7 @@
 .calendar {
   border: 1px #ffffff solid;
   background-color: #ffffff;
-  font-family: 'Fredericka the Great', cursive;
+  font-family: "Fredericka the Great", cursive;
   font-size: 170px;
   color: #ffffff;
   padding: 10px;

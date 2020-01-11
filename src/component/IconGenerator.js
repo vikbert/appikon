@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
-import toast from "native-toast";
 import "native-toast/dist/native-toast.css";
 import { CanvasConfig } from "./CanvasConfig";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
+import { successToast, errorToast } from "../utils/toastHelper";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,6 +44,7 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none"
   }
 }));
+
 const isEmoji = value => {
   return value.match(
     /(?:[\u2700-\u27bf]|(?:\ud83c[\udde6-\uddff]){2}|[\ud800-\udbff][\udc00-\udfff]|[\u0023-\u0039]\ufe0f?\u20e3|\u3299|\u3297|\u303d|\u3030|\u24c2|\ud83c[\udd70-\udd71]|\ud83c[\udd7e-\udd7f]|\ud83c\udd8e|\ud83c[\udd91-\udd9a]|\ud83c[\udde6-\uddff]|\ud83c[\ude01-\ude02]|\ud83c\ude1a|\ud83c\ude2f|\ud83c[\ude32-\ude3a]|\ud83c[\ude50-\ude51]|\u203c|\u2049|[\u25aa-\u25ab]|\u25b6|\u25c0|[\u25fb-\u25fe]|\u00a9|\u00ae|\u2122|\u2139|\ud83c\udc04|[\u2600-\u26FF]|\u2b05|\u2b06|\u2b07|\u2b1b|\u2b1c|\u2b50|\u2b55|\u231a|\u231b|\u2328|\u23cf|[\u23e9-\u23f3]|[\u23f8-\u23fa]|\ud83c\udccf|\u2934|\u2935|[\u2190-\u21ff])/g
@@ -62,8 +63,6 @@ const IconGenerator = () => {
     if (isEmoji(inputValue)) {
       inputType = "emoji";
     }
-
-    console.log("type: ", inputType);
 
     const canvasTxt = document
       .getElementById("canvasComponent")
@@ -85,12 +84,7 @@ const IconGenerator = () => {
   const handleOnChange = e => {
     let value = e.target.value.trim();
     if (value.length > 2) {
-      toast({
-        message: "Max. 2x Characters allowed!",
-        timeout: 5000,
-        type: "error",
-        edge: true
-      });
+      errorToast("Max. 2x Characters allowed!");
       value = value.substr(0, 2);
     }
     setInputValue(value);
@@ -99,22 +93,12 @@ const IconGenerator = () => {
   const handleClickForDownload = e => {
     if (inputValue.length === 0) {
       e.preventDefault();
-      toast({
-        timeout: 5000,
-        type: "error",
-        edge: true,
-        message: "Your input is empty!"
-      });
+
       return;
     }
-    toast({
-      timeout: 5000,
-      type: "success",
-      edge: true,
-      message:
-        "Icon downloaded! Now click on the button to go to favicon generator for uploading your icon!"
-    });
-
+    successToast(
+      "Icon downloaded! Now click on the button to go to favicon generator for uploading your icon!"
+    );
     setIsDownloaded(true);
   };
 
