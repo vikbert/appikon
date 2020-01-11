@@ -1,11 +1,10 @@
 import React from "react";
 import Button from "@material-ui/core/Button";
-import "FaviconGeneratorButton.scss";
 
-export default function index() {
+export default function FaviconRedirectButton() {
   return (
-    <a href="https://realfavicongenerator.net/" className={"buttonLink"}>
-      <Button className={"gotoButton"}>To Favicon Generator</Button>
+    <a href="https://realfavicongenerator.net/" className="redirection-link">
+      <Button className="redirection-button">To Favicon Generator</Button>
     </a>
   );
 }

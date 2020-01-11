@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from "react";
 import CanvasConfig from "./CanvasConfig";
-import {successToast} from "../utils/toastHelper";
-import isEmoji from "../utils/isEmoji";
+import {successToast} from "../../utils/toastHelper";
+import isEmoji from "../../utils/isEmoji";
 
-export default function CanavasPreview({inputValue}) {
+const CanavasPreview = ({inputValue}) => {
     const [image, setImage] = useState("");
 
     const DownloadLink = () => {
@@ -58,9 +58,11 @@ export default function CanavasPreview({inputValue}) {
     }, [inputValue]);
 
     return (
-        <>
+        <div className={'preview-container'}>
             <canvas id="canvasComponent" className="icon calendar"/>
             {image !== '' && (<DownloadLink/>)}
-        </>
+        </div>
     );
 }
+
+export default CanavasPreview;
