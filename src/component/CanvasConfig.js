@@ -1,4 +1,4 @@
-export const CanvasConfig = {
+const CanvasConfig = {
   width: 260,
   height: 260,
   textColor: "#990cab",
@@ -18,3 +18,5 @@ export const CanvasConfig = {
     double: 195
   }
 };
+
+export default CanvasConfig;
