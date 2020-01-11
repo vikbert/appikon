@@ -41,13 +41,13 @@ const IconGenerator = () => {
                     <span className="label">Click on the preview</span>
                 </div>
                 
-                <span className="label">The "logo.png" will be downloaded.</span>
+                <span className="label">The preview image "logo.png" will be downloaded.</span>
 
             </div>
             <div className="item">
                 <div className="step">
                     <div className="step-number">3</div>
-                    <span className="label">Upload "logo.png"</span>
+                    <span className="label">Upload "logo.png" here</span>
                 </div>
                 <FaviconRedirectButton/>
             </div>
