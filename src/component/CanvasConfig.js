@@ -4,14 +4,17 @@ export const CanvasConfig = {
   textColor: "#990cab",
   textFont: {
     single: "200px Major Mono Display",
-    double: "170px Major Mono Display",
+    emoji: "200px Major Mono Display",
+    double: "170px Major Mono Display"
   },
   offsetX: {
-    single: 30,
-    double: 8,
+    single: 50,
+    emoji: 30,
+    double: 8
   },
   offsetY: {
     single: 195,
-    double: 195,
-  },
+    emoji: 210,
+    double: 195
+  }
 };
