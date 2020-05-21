@@ -22,7 +22,7 @@ const CanvasConfig = {
     "extension": {
         width: 200,
         height: 190,
-        textColor: "#990cab",
+        textColor: "#202020",
         textFont: {
             single: "250px Major Mono Display",
             emoji: "200px Major Mono Display",

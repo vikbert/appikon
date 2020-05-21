@@ -21,7 +21,7 @@ const CanavasPreview = ({inputValue, iconStyle = 'extension'}) => {
     const DownloadLink = () => {
         return (
             <a href={image}
-               download={"logo.png"}
+               download={"icon-34.png"}
                onClick={handleClickForDownload}
             >
                 <img
