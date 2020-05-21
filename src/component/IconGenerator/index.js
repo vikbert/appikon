@@ -6,7 +6,8 @@ import CanavasPreview from "../CanavasPreview";
 import FaviconRedirectButton from "../FaviconRedirectButton";
 
 const IconGenerator = () => {
-    const [inputValue, setInputValue] = useState("⏰");
+    const [inputValue, setInputValue] = useState("💼");
+    const [iconStyle, setIconStyle] = useState("extension");
 
     const handleOnChange = e => {
         let value = e.target.value.trim();
@@ -18,40 +19,46 @@ const IconGenerator = () => {
     };
 
     return (
-        <div className="container">
-            <div className="item preview">
-                <CanavasPreview inputValue={inputValue}/>
+        <>
+            <div className="switch">
+                <button onClick={() => setIconStyle('web')}>Web Application</button>
+                <button onClick={() => setIconStyle('extension')}>Chrome Extension</button>
             </div>
-            <div className="item">
-                <div className="step">
-                    <div className="step-number">1</div>
-                    <span className="label">Enter the letters</span>
+            <div className="container">
+                <div className="item preview">
+                    <CanavasPreview inputValue={inputValue} iconStyle={iconStyle}/>
                 </div>
-                <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleOnChange}
-                    size="25"
-                    placeholder="Max. 2 characters"
-                />
-            </div>
-            <div className="item">
-                <div className="step">
-                    <div className="step-number">2</div>
-                    <span className="label">Click on the preview</span>
+                <div className="item">
+                    <div className="step">
+                        <div className="step-number">1</div>
+                        <span className="label">Enter the letters</span>
+                    </div>
+                    <input
+                        type="text"
+                        value={inputValue}
+                        onChange={handleOnChange}
+                        size="25"
+                        placeholder="Max. 2 characters"
+                    />
                 </div>
-                
-                <span className="label">The preview image "logo.png" will be downloaded.</span>
+                <div className="item">
+                    <div className="step">
+                        <div className="step-number">2</div>
+                        <span className="label">Click on the preview</span>
+                    </div>
 
-            </div>
-            <div className="item">
-                <div className="step">
-                    <div className="step-number">3</div>
-                    <span className="label">Upload "logo.png" here</span>
+                    <span className="label">The preview image "logo.png" will be downloaded.</span>
+
                 </div>
-                <FaviconRedirectButton/>
+                <div className="item">
+                    <div className="step">
+                        <div className="step-number">3</div>
+                        <span className="label">Upload "logo.png" here</span>
+                    </div>
+                    <FaviconRedirectButton/>
+                </div>
             </div>
-        </div>
+        </>
     );
 };
 
