@@ -1,8 +1,7 @@
 
 <div align="center">
   <!-- Logo and title and sub-title -->
-  <img src="appikon.png" alt="logo" width="180"/>
-  <h1 style="font-weight: bolder; color: black; margin-top: 0px">AppIkon</h1>
+  <h1 style="font-weight: bolder; color: black; margin-top: 0px">Appikon</h1>
   <h3 style="color: darkgrey; margin: 40px 0"> 
     A simple App Icon Generator
   </h3>
@@ -21,6 +20,7 @@
       <img src="https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat-square" alt="MIT License">
     </a>
   </p>
+  <img src="appikon.png" alt="logo" width="380"/>
 </div>
 
 ---
